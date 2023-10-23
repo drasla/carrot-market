@@ -1,14 +1,23 @@
 import { cls } from "../libs/utils";
+import { UseFormRegisterReturn } from "react-hook-form";
 
 interface InputProps {
     label: string;
     name: string;
     kind?: "text" | "phone" | "price";
-
-    [key: string]: any;
+    type: string;
+    register: UseFormRegisterReturn;
+    required: boolean;
 }
 
-export default function Input({ label, name, kind = "text", ...rest }: InputProps) {
+export default function Input({
+    label,
+    name,
+    kind = "text",
+    register,
+    type,
+    required,
+}: InputProps) {
     return (
         <div>
             <label
@@ -27,7 +36,9 @@ export default function Input({ label, name, kind = "text", ...rest }: InputProp
                     ])}>
                     <input
                         id={name}
-                        {...rest}
+                        required={required}
+                        {...register}
+                        type={type}
                         className={cls([
                             "appearance-none",
                             "w-full",
@@ -67,7 +78,9 @@ export default function Input({ label, name, kind = "text", ...rest }: InputProp
                     </div>
                     <input
                         id={name}
-                        {...rest}
+                        required={required}
+                        {...register}
+                        type={type}
                         className={cls([
                             "appearance-none",
                             "pl-7",
@@ -117,7 +130,9 @@ export default function Input({ label, name, kind = "text", ...rest }: InputProp
                     </span>
                     <input
                         id={name}
-                        {...rest}
+                        required={required}
+                        {...register}
+                        type={type}
                         className={cls([
                             "appearance-none",
                             "w-full",
