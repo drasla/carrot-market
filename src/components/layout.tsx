@@ -34,6 +34,7 @@ export default function Layout({ title, canGoBack, hasTabBar, children }: Layout
                     "top-0",
                     "flex",
                     "items-center",
+                    "max-w-xl"
                 ])}>
                 {canGoBack ? (
                     <button onClick={onClick} className={cls(["absolute", "left-4"])}>
@@ -69,6 +70,7 @@ export default function Layout({ title, canGoBack, hasTabBar, children }: Layout
                         "flex",
                         "justify-between",
                         "text-xs",
+                        "max-w-xl"
                     ])}>
                     <Link
                         href={"/"}
