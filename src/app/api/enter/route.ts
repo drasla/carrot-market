@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import twilio from "twilio";
 import client from "../../../libs/server/client";
+import mail from "@sendgrid/mail";
 
 const twilioClient = twilio(process.env.TWILIO_SID, process.env.TWILIO_TOKEN);
 
@@ -33,6 +34,15 @@ export async function POST(req: NextRequest) {
             body: `Your login token is ${payload}`,
         });
         console.log(message);
+    } else if (email) {
+        const email = await mail.send({
+            from: "nico@nomadcoders.co",
+            to: "nico@nomadcoders.co",
+            subject: "Your Carrot Market Verification Email",
+            text: `Your token is ${payload}`,
+            html: `<strong>Your token is ${payload}</strong`,
+        });
+        console.log(email);
     }
 
     return NextResponse.json({ ok: true });
