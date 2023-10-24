@@ -1,10 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: NextApiRequest) {
-    if (req.method !== "POST") {
-        return NextResponse.json({ message: "Not allow method" }, { status: 400 });
-    }
-    console.log(req.body.email);
+export async function POST(req: NextRequest, res: NextResponse) {
+    const body = await req.json();
+    console.log(body);
     return NextResponse.json({ message: "ok" }, { status: 200 });
 }
