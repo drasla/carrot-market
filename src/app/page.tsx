@@ -3,7 +3,7 @@
 import React from "react";
 import { NextPage } from "next";
 import Layout from "../components/layout";
-import { cls } from "../libs/utils";
+import { cls } from "../libs/client/utils";
 import Item from "../components/item";
 import FloatingButton from "../components/floatingButton";
 

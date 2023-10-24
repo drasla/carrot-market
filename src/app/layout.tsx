@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/globals.css";
 import type { Metadata } from "next";
-import { cls } from "../libs/utils";
+import { cls } from "../libs/client/utils";
 
 export const metadata: Metadata = {
     title: "Create Next App",

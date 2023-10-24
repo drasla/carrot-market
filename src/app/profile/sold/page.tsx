@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import Layout from "../../../components/layout";
 import Item from "../../../components/item";
-import { cls } from "../../../libs/utils";
+import { cls } from "../../../libs/client/utils";
 
 const Sold: NextPage = () => {
     return (

@@ -5,7 +5,7 @@ import Layout from "../../../components/layout";
 import Input from "../../../components/input";
 import TextArea from "../../../components/textArea";
 import Button from "../../../components/button";
-import { cls } from "../../../libs/utils";
+import { cls } from "../../../libs/client/utils";
 
 const Upload: NextPage = () => {
     return (

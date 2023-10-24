@@ -3,7 +3,7 @@
 import { NextPage } from "next";
 import Layout from "../../../components/layout";
 import Button from "../../../components/button";
-import { cls } from "../../../libs/utils";
+import { cls } from "../../../libs/client/utils";
 
 const ItemDetail: NextPage = () => {
     return (

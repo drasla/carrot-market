@@ -4,7 +4,7 @@ import { NextPage } from "next";
 import Layout from "../../../components/layout";
 import Input from "../../../components/input";
 import Button from "../../../components/button";
-import { cls } from "../../../libs/utils";
+import { cls } from "../../../libs/client/utils";
 
 const EditProfile: NextPage = () => {
     return (

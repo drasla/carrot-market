@@ -3,7 +3,7 @@
 import { NextPage } from "next";
 import Layout from "../../components/layout";
 import Link from "next/link";
-import { cls } from "../../libs/utils";
+import { cls } from "../../libs/client/utils";
 import FloatingButton from "../../components/floatingButton";
 
 const Live: NextPage = () => {

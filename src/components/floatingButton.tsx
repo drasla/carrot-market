@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { cls } from "../libs/utils";
+import { cls } from "../libs/client/utils";
 
 interface FloatingButton {
     children: React.ReactNode;

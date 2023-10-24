@@ -2,7 +2,7 @@
 
 import { NextPage } from "next";
 import Layout from "../../components/layout";
-import { cls } from "../../libs/utils";
+import { cls } from "../../libs/client/utils";
 import Link from "next/link";
 
 const Chats: NextPage = () => {
